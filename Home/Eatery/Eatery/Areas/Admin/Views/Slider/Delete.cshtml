@@ -1,0 +1,20 @@
+﻿@model  MainSlider
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <form method="post">
+        <div class="col-12">
+            <img src="~/img/@Model.Background" />
+        </div>
+        <div class="col-6" style="padding-top:10px;">
+            <span style="padding:5px; background-color:red; color: white; font-size: 20px;">Slayderi silməyə əminsən ?</span>
+        </div>
+        <div class="col-6" style="padding-top:10px;">
+            <input type="submit" value="Sil" class="btn btn-outline-danger"/>
+        </div>
+    </form>
+</div>
+

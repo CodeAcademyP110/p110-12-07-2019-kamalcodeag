@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Destination>
+
+
+<div class="container-fluid">
+    <div class="row" style="margin: 30px 0;">
+        <div class="col-12">
+            <a asp-action="Create" class="btn btn-primary btn-block">
+                <i class="fas fa-plus"></i> Create New Destination
+            </a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var destination in Model)
+        {
+            <tr>
+                <td>
+                    <img style="width: 150px;" src="~/img/@destination.Image" class="img-thumbnail" />
+                </td>
+                <td>
+                    @destination.Name
+                </td>
+                <td>
+                    @destination.City
+                </td>
+                <td>
+                    $@destination.Price
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                    <a title="See details" asp-action="Details" asp-route-id="@destination.Id" class="btn btn-success"><i class="far fa-eye"></i></a>
+                    <a title="Edit Destination" asp-action="Edit" asp-route-id="@destination.Id" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+
+                    @if (Model.Count() > 1)
+                    {
+                        <a title="Delete" asp-action="Delete" asp-route-id="@destination.Id" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

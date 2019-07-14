@@ -1,0 +1,755 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Travelo - @ViewBag.Title</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <!-- HEADER SECTION start -->
+    <header>
+        <div class="s-top">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-3 d-flex align-items-center">
+                        <ul class="mb-0 p-0 s-top-left">
+                            <li class="mr-3">
+                                <a href="#">My account</a>
+                            </li>
+                            <li class="s-lang position-relative">
+                                <a href="#">English</a>
+                                <i class="fas fa-sort-down s-down-icon position-absolute"></i>
+                            </li>
+                            <ul class="mb-0 p-0 list-unstyled position-absolute s-sub-lang">
+                                <li>Azerbaijani</li>
+                                <li>Deutsch</li>
+                                <li>English</li>
+                                <li>Espanol</li>
+                                <li>Francaois</li>
+                                <li>Magyar</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="col-9 d-flex justify-content-end align-items-center">
+                        <ul class="mb-0 s-top-right">
+                            <li class="s-purchase mr-3">
+                                <span>
+                                    <i class="fas fa-shopping-bag text-white"></i>
+                                </span>
+                                <a href="#">Purchase</a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="login.html">Login</a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="#">Signup</a>
+                            </li>
+                            <li class="s-currency position-relative">
+                                <a href="#">USD</a>
+                                <i class="fas fa-sort-down s-down-icon2 position-absolute"></i>
+                            </li>
+                            <ul class="mb-0 p-0 list-unstyled position-absolute s-sub-currency">
+                                <li>AZN</li>
+                                <li>AUD</li>
+                                <li>BRL</li>
+                                <li>USD</li>
+                                <li>CAD</li>
+                                <li>CHF</li>
+                                <li>CNY</li>
+                                <li>CZK</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="s-navbar">
+            <div class="container d-none d-lg-block s-navbar-container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="s-navbar-left d-flex align-items-center">
+                            <a href="/">
+                                <img src="~/img/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9 d-flex justify-content-end align-items-center">
+                        <ul class="mb-0 p-0 list-unstyled s-navbar-right">
+                            <li class="active mr-4 position-relative s-home">
+                                <a href="/">Home</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute s-sub-navbar-menu">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                    <li>Submenu8</li>
+                                    <li>Submenu9</li>
+                                    <li>Submenu10</li>
+                                    <li>Submenu11</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-hotels">
+                                <a href="hotels.html">Hotels</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-flights">
+                                <a href="">Flights</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-cars">
+                                <a href="">Cars</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                    <li>Submenu8</li>
+                                    <li>Submenu9</li>
+                                    <li>Submenu10</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-cruises">
+                                <a href="">Cruises</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                    <li>Submenu8</li>
+                                    <li>Submenu9</li>
+                                    <li>Submenu10</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-tour">
+                                <a href="">Tour</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                    <li>Submenu8</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-pages">
+                                <a href="/pages">Pages</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                </ul>
+                            </li>
+                            <li class="mr-4 position-relative s-shortcodes">
+                                <a href="">Shortcodes</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                </ul>
+                            </li>
+                            <li class="position-relative s-bonus">
+                                <a href="">Bonus</a>
+                                <ul class="mb-0 p-0 list-unstyled position-absolute">
+                                    <li>Submenu1</li>
+                                    <li>Submenu2</li>
+                                    <li>Submenu3</li>
+                                    <li>Submenu4</li>
+                                    <li>Submenu5</li>
+                                    <li>Submenu6</li>
+                                    <li>Submenu7</li>
+                                    <li>Submenu8</li>
+                                    <li>Submenu9</li>
+                                    <li>Submenu10</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <i class="fas fa-bars s-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="s-navbar-left d-flex align-items-center">
+                            <a href="index.html">
+                                <img src="~/img/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9 p-0 d-flex justify-content-end align-items-center">
+                        <i class="fas fa-bars s-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION end -->
+    <!-- S-BARS-NAVBAR SECTION start -->
+    <section id="s-bars-navbar">
+        <div class="container-fluid p-0">
+            <div class="row m-0 d-lg-none s-bars-navbar">
+                <div class="col-12 p-0">
+                    <ul class="mb-0 p-0 list-unstyled s-bars-navbar-main">
+                        <li class="position-relative">
+                            <a href="index.html">Home</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="hotels.html">Hotels</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Flights</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Cars</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Cruises</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Tour</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="/pages">Pages</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Shortcodes</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li class="position-relative">
+                            <a href="">Bonus</a>
+                            <i class="fas fa-plus-circle s-plus"></i>
+                            <i class="fas fa-minus-circle s-minus"></i>
+                        </li>
+                        <ul class="pl-4 s-bars-navbar-submenu">
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                            <li>
+                                <a href="">Submenu</a>
+                            </li>
+                        </ul>
+                        <li>
+                            <span>
+                                <i class="fas fa-shopping-bag"></i>
+                            </span>
+                            <a href="#">Purchase</a>
+                        </li>
+                    </ul>
+                    <ul class="mb-0 p-0 d-flex list-unstyled s-bars-navbar-main2">
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <select>
+                                <option>Dansk</option>
+                                <option>Deutsch</option>
+                                <option>English</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
+                        <li class="s-signup">
+                            <a href="#">Signup</a>
+                        </li>
+                        <li class="s-lang2">
+                            <select>
+                                <option>AUD</option>
+                                <option>BRL</option>
+                                <option>English</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- S-BARS-NAVBAR SECTION end -->
+
+    @RenderBody()
+
+    <!-- FOOTER SECTION start -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Discover</h5>
+                    <div class="s-footer-details-left d-flex justify-content-between">
+                        <ul class="mb-0 p-0 list-unstyled">
+                            <li class="mb-3">Safety</li>
+                            <li class="mb-3">Travelo Picks</li>
+                            <li class="mb-3">Mobile</li>
+                            <li class="mb-3">Why Host</li>
+                            <li class="mb-3">Social Connect</li>
+                            <li>Site Map</li>
+                        </ul>
+                        <ul class="mb-0 p-0 list-unstyled">
+                            <li class="mb-3">About</li>
+                            <li class="mb-3">Latest Jobs</li>
+                            <li class="mb-3">Press Releases</li>
+                            <li class="mb-3">Blog Posts</li>
+                            <li class="mb-3">Help Topics</li>
+                            <li>Policies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Travel News</h5>
+                    <div class="row s-footer-photo mb-3">
+                        <div class="col-4">
+                            <img src="~/img/news01.png">
+                        </div>
+                        <div class="col-8">
+                            <span class="d-block">Amazing Places</span>
+                            <span class="d-block mb-2">Purus ac congue arcu cursus ut vitae pulvinar massaidp.</span>
+                            <small>25 Sep, 2013</small>
+                        </div>
+                    </div>
+                    <div class="row s-footer-photo">
+                        <div class="col-4">
+                            <img src="~/img/news01.png">
+                        </div>
+                        <div class="col-8">
+                            <span class="d-block">Amazing Places</span>
+                            <span class="d-block mb-2">Purus ac congue arcu cursus ut vitae pulvinar massaidp.</span>
+                            <small>25 Sep, 2013</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Mailing List</h5>
+                    <ul class="mb-4 p-0 list-unstyled">
+                        <li>Sign up for our mailing list to get latest updates and offers.</li>
+                    </ul>
+                    <div class="s-footer-mail mb-3 position-relative">
+                        <input type="email" placeholder="your email">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                    <small class="d-block">We respect your privacy</small>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">About Travelo</h5>
+                    <ul class="mb-4 p-0 list-unstyled">
+                        <li>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque.</li>
+                    </ul>
+                    <div class="s-footer-contact mb-4">
+                        <i class="fas fa-phone-volume"></i>
+                        <span>1-800-123-HELLO </span>
+                        <span class="ml-4">help@travelo.com</span>
+                    </div>
+                    <div class="s-footer-icon-group">
+                        <ul class="mb-0 p-0 list-unstyled d-flex">
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-twitter"></i>
+                            </li>
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-vimeo-v"></i>
+                            </li>
+                            <li class="mr-1 d-flex justify-content-center align-items-center">
+                                <i class="fab fa-dribbble"></i>
+                            </li>
+                            <li class="d-flex justify-content-center align-items-center">
+                                <i class="fab fa-flickr"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION end -->
+    <!-- BOTTOM SECTION start -->
+    <section id="bottom" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                    <a href="index.html">
+                        <img src="~/img/logo.png">
+                    </a>
+                    <div class="s-bottom-right d-flex align-items-center">
+                        <span>© 2014 Travelo</span>
+                        <i class="far fa-arrow-alt-circle-up ml-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOTTOM SECTION end -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script src="~/js/main.js"></script>
+</body>
+</html>

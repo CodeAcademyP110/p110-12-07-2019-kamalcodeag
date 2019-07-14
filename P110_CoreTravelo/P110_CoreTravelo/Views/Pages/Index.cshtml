@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Destination>
+
+@{
+    ViewBag.Title = "Pages";
+}
+
+
+<!-- MAIN-TOP SECTION start -->
+<section id="main-top" class="py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <h4 class="mb-0">Holidays</h4>
+                <ul class="mb-0 p-0 list-unstyled d-flex align-items-center">
+                    <li>Home <span class="mx-1"> /</span></li>
+                    <li>Pages <span class="mx-1"> /</span></li>
+                    <li class="active"> Holidays</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- MAIN-TOP SECTION end -->
+<!-- MAIN SECTION start -->
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-3">Best Holiday Suggestions for you!</h1>
+                <h2>2,000 destinations in 120 countries.</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- MAIN SECTION end -->
+<!-- HOLIDAY-TAB SECTION start -->
+<section id="holiday-tab" class="py-5 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="mb-0 p-0 list-unstyled d-md-flex s-holiday-tab">
+                    <li data-id="1" class="mr-1">
+                        <i class="fas fa-child mr-1"></i>
+                        <a href="#">Family</a>
+                    </li>
+                    <li data-id="2" class="active mr-1">
+                        <i class="fas fa-heart mr-1"></i>
+                        <a href="#">Honeymoon</a>
+                    </li>
+                    <li data-id="3" class="mr-1">
+                        <i class="far fa-calendar-check mr-1"></i>
+                        <a href="#">Weekends</a>
+                    </li>
+                    <li data-id="4">
+                        <i class="fas fa-users mr-1"></i>
+                        <a href="#">Friends</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-id="2" class="row active s-holiday-tab-desc align-items-center position-relative">
+            <div class="col-lg-6">
+                <h4>Honeymoon Suggestions</h4>
+                <p>
+                    Duis condimentum ante hendrerit, sagittis sapien vitae, elementum libero. Cum sociis natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec massa urna, interdum
+                    sed nunc eu, pretium fermentum velit. Donec sodales.
+                </p>
+            </div>
+            <div class="col-lg-6 text-lg-right">
+                <img src="img/circle.png">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- HOLIDAY-TAB SECTION end -->
+<!-- DESTINATIONS SECTION start -->
+<section id="destinations" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4>Popular Destinations</h4>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var dest in Model)
+            {
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="s-dest-inner overflow-hidden">
+                        <div class="s-dest-photo-holder position-relative">
+                            <img src="img/@dest.Image">
+                            <div class="s-overlay d-flex justify-content-center align-items-center position-absolute">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="p-3 d-flex justify-content-between s-dest-info">
+                            <div class="s-dest-info-left">
+                                <h6 class="m-0 p-0">
+                                    <a href="#">@dest.Name</a>
+                                </h6>
+                                <small>@dest.City</small>
+                            </div>
+                            <div class="d-flex flex-column align-items-end s-dest-info-right">
+                                <small>FROM</small>
+                                <span>
+                                    $@dest.Price
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-12 text-center">
+                <button class="btn btn-outline-primary pt-2">Load more...</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- DESTINATIONS SECTION end -->

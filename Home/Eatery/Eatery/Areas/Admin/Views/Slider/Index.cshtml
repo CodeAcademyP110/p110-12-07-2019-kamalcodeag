@@ -1,0 +1,45 @@
+﻿@model  IEnumerable<MainSlider>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+    
+<a asp-controller="Slider" asp-action="Create" asp-area="Admin" style="width:100%; margin-bottom:10px; "class="btn btn-primary">Yeni slayder yarat</a>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Arxa fon şəkli
+            </th>
+            <th>
+                Əməliyyat
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mainSlider in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/img/@mainSlider.Background" class="img-thumbnail" style="width:200px;"/>
+                </td>
+                <td>
+                    <a asp-controller="Slider" asp-action="Details" asp-route-id="@mainSlider.Id" asp-area="Admin">
+                        <i class="far fa-eye"></i>
+                    </a>
+                    <a asp-controller="Slider" asp-action="Edit" asp-route-id="@mainSlider.Id" asp-area="Admin">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    @if(Model.Count() > 1)
+                    {
+                        <a asp-controller="Slider" asp-action="Delete" asp-route-id="@mainSlider.Id" asp-area="Admin">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+  

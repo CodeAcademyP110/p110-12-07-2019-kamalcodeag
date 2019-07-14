@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Slider>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row" style="margin: 30px 0;">
+        <div class="col-12">
+            <a asp-action="Create" class="btn btn-primary btn-block">
+                <i class="fas fa-plus"></i> Create New Slider
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var slider in Model)
+        {
+            <tr>
+                <td>
+                    <img style="width: 150px;" src="~/img/@slider.Image" class="img-thumbnail" />
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                    <a title="See details" asp-action="Details" asp-route-id="@slider.Id" class="btn btn-success"><i class="far fa-eye"></i></a>
+
+                    @if (Model.Count() > 1)
+                    {
+                        @*<a title="Edit Slider" asp-action="Edit" asp-route-id="@slider.Id" class="btn btn-warning"><i class="fas fa-pen"></i></a>*@
+                        <a title="Delete" asp-action="Delete" asp-route-id="@slider.Id" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

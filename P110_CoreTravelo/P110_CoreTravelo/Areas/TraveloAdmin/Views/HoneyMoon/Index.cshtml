@@ -1,0 +1,32 @@
+﻿@model HoneyMoon
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row" style="margin: 30px 0;">
+        <div class="col-12">
+            <a asp-action="Edit" class="btn btn-warning btn-block">
+                <i class="fas fa-pen"></i> Edit
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <p>
+        <span style="display: block;">Image</span>
+        <img src="~/img/@Model.Image" class="img-thumbnail" width="300" />
+    </p>
+    <p>
+        <span style="display: block;">Background Image</span>
+        <img src="~/img/@Model.BackgroundImage" class="img-thumbnail" width="500" />
+    </p>
+    <p>
+        <b>Title</b>: @Model.Title
+    </p>
+    <p>
+        <b>Info</b>: @Html.Raw(Model.Info)
+    </p>
+</div>

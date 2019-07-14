@@ -1,0 +1,785 @@
+﻿@model HomeIndexVM
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<!-- SLIDER SECTION start -->
+<section id="slider" class="position-relative">
+    <div class="row m-0">
+        <div class="col-12 p-0">
+            <i class="fas fa-angle-left s-arrow-left position-absolute"></i>
+            <div class="s-window">
+                <ul class="mb-0 p-0 list-unstyled d-flex s-slider">
+                    @foreach (var slider in Model.Sliders)
+                    {
+                        <li>
+                            <img src="~/img/@slider.Image">
+                        </li>
+                    }
+                </ul>
+            </div>
+            <i class="fas fa-angle-right s-arrow-right position-absolute"></i>
+        </div>
+    </div>
+</section>
+<!-- SLIDER SECTION end -->
+<!-- TAB SECTION start -->
+<section id="tab" class="py-5">
+    <div class="container position-relative">
+        <div class="row d-none d-lg-block">
+            <div class="col-12">
+                <ul class="mb-0 p-0 list-unstyled d-flex position-absolute s-tab">
+                    <li data-id="1" class="active mr-1">
+                        <a href="#">Hotels</a>
+                    </li>
+                    <li data-id="2" class="mr-1">
+                        <a href="#">Flights</a>
+                    </li>
+                    <li data-id="3" class="mr-1">
+                        <a href="#">Flight & Hotels</a>
+                    </li>
+                    <li data-id="4" class="mr-1">
+                        <a href="#">Cars</a>
+                    </li>
+                    <li data-id="5" class="mr-1">
+                        <a href="#">Cruises</a>
+                    </li>
+                    <li data-id="6" class="mr-1">
+                        <a href="#">Flight status</a>
+                    </li>
+                    <li data-id="7">
+                        <a href="#">Online check in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row d-block d-lg-none">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="d-flex justify-content-center align-items-center position-absolute s-tab-slider">
+                    <i class="fas fa-arrow-left s-arrow-left position-absolute"></i>
+                    <ul class="mb-0 p-0 list-unstyled d-flex">
+                        <li data-number="1" class="active">Hotels</li>
+                        <li data-number="2" class="">Flights</li>
+                        <li data-number="3" class="">Flight & Hotels</li>
+                        <li data-number="4" class="">Cars</li>
+                        <li data-number="5" class="">Cruises</li>
+                        <li data-number="6" class="">Flight status</li>
+                        <li data-number="7" class="">Online check in</li>
+                    </ul>
+                    <i class="fas fa-arrow-right s-arrow-right position-absolute"></i>
+                </div>
+            </div>
+        </div>
+        <div data-id="1" data-type="1" class="row m-0 py-2 s-tab-info active s-tab-info-hotels s-same-tab position-absolute">
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-left-where px-2">
+                    <h5>Where</h5>
+                    <label for="s-input-where" class="text-muted">Your destination</label>
+                    <input id="s-input-where" type="text" placeholder="enter a destination or hotel name">
+                </div>
+                <div class="s-left-in px-2">
+                    <h5>When</h5>
+                    <label for="s-input-date" class="text-muted">Check in</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-left-out px-2 d-flex flex-column justify-content-end">
+                    <label for="s-input-date2" class="text-muted">Check out</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date2" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-right-rooms px-2">
+                    <h5>Who</h5>
+                    <label for="s-input-rooms" class="text-muted">Rooms</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-rooms" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-adults px-2 position-relative d-flex flex-column justify-content-end">
+                    <label for="s-input-adults" class="text-muted">Adults</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-adults" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-kids px-2  d-flex flex-column justify-content-end">
+                    <label for="s-input-kids" class="text-muted">Kids</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-kids" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-search px-2 position-relative d-flex flex-column justify-content-end">
+                    <input type="button" value="SEARCH NOW">
+                    <span class="position-absolute d-flex justify-content-center align-items-center">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div data-id="2" data-type="2" class="row m-0 py-2 s-tab-info s-tab-info-flights s-same-tab position-absolute">
+            <div class="col-lg-4">
+                <h5>Where</h5>
+                <label for="s-input-leaving" class="text-muted">Leaving from</label>
+                <input id="s-input-leaving" type="text" placeholder="city,district or specific airport">
+                <label for="s-input-going" class="text-muted">Going to</label>
+                <input id="s-input-going" type="text" placeholder="city,district or specific airport">
+            </div>
+            <div class="col-lg-4">
+                <h5>When</h5>
+                <label for="s-input-departing" class="text-muted">Leaving from</label>
+                <div class="s-middle-top-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-departing" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <label for="s-input-arriving" class="text-muted">Arriving on</label>
+                <div class="s-middle-bottom-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-arriving" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 s-right-who">
+                <h5>Who</h5>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-adults2" class="text-muted">Adults</label>
+                        <input id="s-input-adults2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+                        <label for="s-input-kids2" class="text-muted">Kids</label>
+                        <input id="s-input-kids2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-6">
+                        <label for="s-input-promo" class="text-muted">Promo code</label>
+                        <input id="s-input-promo" type="text" placeholder="type here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-infants" class="text-muted">Infants</label>
+                        <input id="s-input-infants" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-end">
+                        <div class="s-tab-input-group position-relative">
+                            <input type="button" value="SEARCH NOW">
+                            <span class="position-absolute d-flex justify-content-center align-items-center">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="3" data-type="3" class="row m-0 py-2 s-tab-info s-tab-info-flights s-same-tab position-absolute">
+            <div class="col-lg-4">
+                <h5>Where</h5>
+                <label for="s-input-leaving" class="text-muted">Leaving from</label>
+                <input id="s-input-leaving" type="text" placeholder="city,district or specific airport">
+                <label for="s-input-going" class="text-muted">Going to</label>
+                <input id="s-input-going" type="text" placeholder="city,district or specific airport">
+            </div>
+            <div class="col-lg-4">
+                <h5>When</h5>
+                <label for="s-input-departing" class="text-muted">Leaving from</label>
+                <div class="s-middle-top-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-departing" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <label for="s-input-arriving" class="text-muted">Arriving on</label>
+                <div class="s-middle-bottom-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-arriving" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 s-right-who">
+                <h5>Who</h5>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-adults2" class="text-muted">Adults</label>
+                        <input id="s-input-adults2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+                        <label for="s-input-kids2" class="text-muted">Kids</label>
+                        <input id="s-input-kids2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-6">
+                        <label for="s-input-promo" class="text-muted">Promo code</label>
+                        <input id="s-input-promo" type="text" placeholder="type here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-infants" class="text-muted">Infants</label>
+                        <input id="s-input-infants" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-end">
+                        <div class="s-tab-input-group position-relative">
+                            <input type="button" value="SEARCH NOW">
+                            <span class="position-absolute d-flex justify-content-center align-items-center">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="4" data-type="4" class="row m-0 py-2 s-tab-info s-tab-info-flights s-same-tab position-absolute">
+            <div class="col-lg-4">
+                <h5>Where</h5>
+                <label for="s-input-leaving" class="text-muted">Leaving from</label>
+                <input id="s-input-leaving" type="text" placeholder="city,district or specific airport">
+                <label for="s-input-going" class="text-muted">Going to</label>
+                <input id="s-input-going" type="text" placeholder="city,district or specific airport">
+            </div>
+            <div class="col-lg-4">
+                <h5>When</h5>
+                <label for="s-input-departing" class="text-muted">Leaving from</label>
+                <div class="s-middle-top-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-departing" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <label for="s-input-arriving" class="text-muted">Arriving on</label>
+                <div class="s-middle-bottom-when d-flex justify-content-between">
+                    <div class="s-tab-input-group position-relative mr-2">
+                        <input id="s-input-arriving" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                    <div class="s-tab-input-group position-relative">
+                        <input type="text" placeholder="anytime">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 s-right-who">
+                <h5>Who</h5>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-adults2" class="text-muted">Adults</label>
+                        <input id="s-input-adults2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+                        <label for="s-input-kids2" class="text-muted">Kids</label>
+                        <input id="s-input-kids2" type="text" placeholder="01">
+                    </div>
+                    <div class="col-6">
+                        <label for="s-input-promo" class="text-muted">Promo code</label>
+                        <input id="s-input-promo" type="text" placeholder="type here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="s-input-infants" class="text-muted">Infants</label>
+                        <input id="s-input-infants" type="text" placeholder="01">
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-end">
+                        <div class="s-tab-input-group position-relative">
+                            <input type="button" value="SEARCH NOW">
+                            <span class="position-absolute d-flex justify-content-center align-items-center">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="5" data-type="5" class="row m-0 py-2 s-tab-info s-tab-info-hotels s-same-tab position-absolute">
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-left-where px-2">
+                    <h5>Where</h5>
+                    <label for="s-input-where" class="text-muted">Your destination</label>
+                    <input id="s-input-where" type="text" placeholder="enter a destination or hotel name">
+                </div>
+                <div class="s-left-in px-2">
+                    <h5>When</h5>
+                    <label for="s-input-date" class="text-muted">Check in</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-left-out px-2 d-flex flex-column justify-content-end">
+                    <label for="s-input-date2" class="text-muted">Check out</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date2" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-right-rooms px-2">
+                    <h5>Who</h5>
+                    <label for="s-input-rooms" class="text-muted">Rooms</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-rooms" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-adults px-2 position-relative d-flex flex-column justify-content-end">
+                    <label for="s-input-adults" class="text-muted">Adults</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-adults" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-kids px-2  d-flex flex-column justify-content-end">
+                    <label for="s-input-kids" class="text-muted">Kids</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-kids" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-search px-2 position-relative d-flex flex-column justify-content-end">
+                    <input type="button" value="SEARCH NOW">
+                    <span class="position-absolute d-flex justify-content-center align-items-center">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div data-id="6" data-type="6" class="row m-0 py-2 s-tab-info s-tab-info-hotels s-same-tab position-absolute">
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-left-where px-2">
+                    <h5>Where</h5>
+                    <label for="s-input-where" class="text-muted">Your destination</label>
+                    <input id="s-input-where" type="text" placeholder="enter a destination or hotel name">
+                </div>
+                <div class="s-left-in px-2">
+                    <h5>When</h5>
+                    <label for="s-input-date" class="text-muted">Check in</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-left-out px-2 d-flex flex-column justify-content-end">
+                    <label for="s-input-date2" class="text-muted">Check out</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date2" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-right-rooms px-2">
+                    <h5>Who</h5>
+                    <label for="s-input-rooms" class="text-muted">Rooms</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-rooms" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-adults px-2 position-relative d-flex flex-column justify-content-end">
+                    <label for="s-input-adults" class="text-muted">Adults</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-adults" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-kids px-2  d-flex flex-column justify-content-end">
+                    <label for="s-input-kids" class="text-muted">Kids</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-kids" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-search px-2 position-relative d-flex flex-column justify-content-end">
+                    <input type="button" value="SEARCH NOW">
+                    <span class="position-absolute d-flex justify-content-center align-items-center">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div data-id="7" data-type="7" class="row m-0 py-2 s-tab-info s-tab-info-hotels s-same-tab position-absolute">
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-left-where px-2">
+                    <h5>Where</h5>
+                    <label for="s-input-where" class="text-muted">Your destination</label>
+                    <input id="s-input-where" type="text" placeholder="enter a destination or hotel name">
+                </div>
+                <div class="s-left-in px-2">
+                    <h5>When</h5>
+                    <label for="s-input-date" class="text-muted">Check in</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-left-out px-2 d-flex flex-column justify-content-end">
+                    <label for="s-input-date2" class="text-muted">Check out</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input class="s-input-date2" type="text" placeholder="mm/dd/yyyy">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="far fa-calendar-alt"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 d-flex">
+                <div class="s-right-rooms px-2">
+                    <h5>Who</h5>
+                    <label for="s-input-rooms" class="text-muted">Rooms</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-rooms" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-adults px-2 position-relative d-flex flex-column justify-content-end">
+                    <label for="s-input-adults" class="text-muted">Adults</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-adults" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-kids px-2  d-flex flex-column justify-content-end">
+                    <label for="s-input-kids" class="text-muted">Kids</label>
+                    <div class="s-tab-input-group position-relative">
+                        <input id="s-input-kids" type="text" placeholder="01">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="s-right-search px-2 position-relative d-flex flex-column justify-content-end">
+                    <input type="button" value="SEARCH NOW">
+                    <span class="position-absolute d-flex justify-content-center align-items-center">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- TAB SECTION end -->
+<!-- DESTINATIONS SECTION start -->
+<section id="destinations" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4>Popular Destinations</h3>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.Destinations)
+            {
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="s-dest-inner overflow-hidden">
+                        <div class="s-dest-photo-holder position-relative">
+                            <img src="~/img/@item.Image">
+                            <div class="s-overlay d-flex justify-content-center align-items-center position-absolute">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="p-3 d-flex justify-content-between s-dest-info">
+                            <div class="s-dest-info-left">
+                                <h6 class="m-0 p-0">
+                                    <a href="#">@item.Name</a>
+                                </h6>
+                                <small>@item.City</small>
+                            </div>
+                            <div class="d-flex flex-column align-items-end s-dest-info-right">
+                                <small>FROM</small>
+                                <span>
+                                    $@item.Price
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- DESTINATIONS SECTION end -->
+<!-- HONEYMOON SECTION start -->
+<section id="honeymoon" class="pt-5" style="background-image: url('../img/@Model.HoneyMoon.BackgroundImage'); background-size: cover; background-attachment: fixed;">
+    <div class="container d-none d-lg-block">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <img src="~/img/@Model.HoneyMoon.Image" class="s-couple">
+            </div>
+            <div class="col-lg-5 py-md-5 col-md-6">
+                <h3 class="text-white">@Model.HoneyMoon.Title</h3>
+                @Html.Raw(Model.HoneyMoon.Info)
+                <div class="row">
+                    @foreach (var item in Model.HoneymoonDestinations)
+                    {
+                        <div class="col-lg-4 col-md-4">
+                            <div class="s-honeymoon-photo overflow-hidden position-relative">
+                                <img src="~/img/@item.Image">
+                                <div class="s-honeymoon-photo-overlay d-flex justify-content-center align-items-center position-absolute">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                            </div>
+                            <div class="s-honeymoon-details py-3 d-flex flex-column align-items-center">
+                                <span>@item.City</span>
+                                <small>(@item.Place PLACES)</small>
+                                <button class="mt-3">SEE ALL</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-block d-lg-none">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 d-md-flex justify-content-center order-1">
+                <img src="~/img/couple.png" class="s-couple">
+            </div>
+            <div class="col-lg-6 py-5 col-md-12 col-sm-12">
+                <h3 class="text-white">Popular Destinations for Honeymoon</h3>
+                <p class="">
+                    Nunc cursus libero purusac congue arcu cursus utsed vitae pulvinar massa idporta neque purusac Etiam
+                    elerisque mi id faucibus iaculis vitae pulvinar.
+                </p>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-8 mb-md-0 mb-3">
+                        <div class="s-honeymoon-photo overflow-hidden position-relative">
+                            <img src="~/img/places01.jpg">
+                            <div class="s-honeymoon-photo-overlay d-flex justify-content-center align-items-center position-absolute">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="s-honeymoon-details py-3 d-flex flex-column align-items-center">
+                            <span>Paris</span>
+                            <small>(990 PLACES)</small>
+                            <button class="mt-3">SEE ALL</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-8 mb-md-0 mb-3">
+                        <div class="s-honeymoon-photo overflow-hidden position-relative">
+                            <img src="~/img/places02.jpg">
+                            <div class="s-honeymoon-photo-overlay d-flex justify-content-center align-items-center position-absolute">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="s-honeymoon-details py-3 d-flex flex-column align-items-center">
+                            <span>Greece</span>
+                            <small>(990 PLACES)</small>
+                            <button class="mt-3">SEE ALL</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-8">
+                        <div class="s-honeymoon-photo overflow-hidden position-relative">
+                            <img src="~/img/places03.jpg">
+                            <div class="s-honeymoon-photo-overlay d-flex justify-content-center align-items-center position-absolute">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="s-honeymoon-details py-3 d-flex flex-column align-items-center">
+                            <span>Australia</span>
+                            <small>(990 PLACES)</small>
+                            <button class="mt-3">SEE ALL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- HONEYMOON SECTION end -->
+<!-- INFO SECTION start -->
+<section id="info" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 d-flex flex-column align-items-center">
+                <h3>Did you know?</h3>
+                <p>
+                    Mauris ullamcorper nibh quis leo ultrices in hendrerit velit tristiqueut augue in nulla lacinia bibendum
+                    liberoras rutrum ac purus ut tristique. Nullam placerat lacinia dolor quis pretium. Phasellus vitae
+                    lacinia quam, at pellentesque lorem. Sed euismod turpis quis mattis fringilla.
+                </p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            @for (int i = 0; i < Model.Services.Count(); i++)
+            {
+                var item = Model.Services.ElementAt(i);
+
+                <div class="col-12 col-lg-6 @(i <= 2 ? "mb-4" : "") @(i == 2 ? "mb-lg-0" : "")">
+                    <div class="row">
+                        <div class="col-5 pr-0 s-info-photo">
+                            <img src="~/img/@item.Image">
+                        </div>
+                        <div class="col-7 py-3 s-info-details">
+                            <h5>@item.Heading</h5>
+                            <p>@item.Info</p>
+                            <button class="mt-3">SEE ALL</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- INFO SECTION end -->
+<!-- BLOG SECTION start -->
+<section id="blog" class="py-5">
+    <div class="container">
+        <div class="row">
+            @for (int i = 0; i < Model.Blogs.Count(); i++)
+            {
+                var item = Model.Blogs.ElementAt(i);
+                <div class="col-lg-3 col-sm-6 col-12 @(i <=1 ? "mb-lg-0" : "") @(i <=2 ? "mb-4" : "") @(i == 2 ? "mb-sm-0" : "")">
+                    <div class="s-blog-inner">
+                        <div class="s-blog-photo position-relative overflow-hidden">
+                            <img src="~/img/@item.Image">
+                            <div class="s-blog-photo-overlay position-absolute"></div>
+                        </div>
+                        <div class="s-blog-details p-4">
+                            <h6>@item.Title</h6>
+                            <p>@item.Text.Substring(0, 25)...</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @*<div class="col-lg-3 mb-lg-0 col-sm-6 mb-4 col-12">
+                    <div class="s-blog-inner">
+                        <div class="s-blog-photo position-relative overflow-hidden">
+                            <img src="~/img/2.jpg">
+                            <div class="s-blog-photo-overlay position-absolute"></div>
+                        </div>
+                        <div class="s-blog-details p-4">
+                            <h6>Travel Insurance</h6>
+                            <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12 mb-4 mb-sm-0">
+                    <div class="s-blog-inner">
+                        <div class="s-blog-photo position-relative overflow-hidden">
+                            <img src="~/img/3.jpg">
+                            <div class="s-blog-photo-overlay position-absolute"></div>
+                        </div>
+                        <div class="s-blog-details p-4">
+                            <h6>Why Choose Us</h6>
+                            <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="s-blog-inner">
+                        <div class="s-blog-photo position-relative overflow-hidden">
+                            <img src="~/img/4.jpg">
+                            <div class="s-blog-photo-overlay position-absolute"></div>
+                        </div>
+                        <div class="s-blog-details p-4">
+                            <h6>Need Help?</h6>
+                            <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</section>
+<!-- BLOG SECTION end -->

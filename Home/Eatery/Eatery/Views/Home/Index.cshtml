@@ -1,0 +1,215 @@
+﻿@model  HomeVM
+
+    <section class="home-slider owl-carousel">
+        @foreach (var mainSlider in Model.MainSliders)
+        {
+            <div class="slider-item" style="background-image: url('img/@mainSlider.Background');">
+
+                <div class="container">
+                    <div class="row slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 text-center col-sm-12 element-animate">
+                            <h1>@mainSlider.Title</h1>
+                            <p class="mb-5">@mainSlider.Info</p>
+                            <p><a href="#" class="btn btn-white btn-outline-white">Get Started</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </section>
+<!-- END slider -->
+
+
+<section class="section bg-light element-animate">
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-3 text-center">
+                    <span class="@product.Image display-4 text-black d-block mb-4"></span>
+                    <h4 class="mb-4 text-primary">@product.Title</h4>
+                    <p>@product.Info</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>@Model.DishTypography.Title</h2>
+                    <span class="back-text">@Model.DishTypography.SubTitle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="owl-carousel centernonloop">
+        @foreach (var dishItem in Model.DishItems)
+        {
+            <a href="#" class="item-dishes">
+                <div class="text">
+                    <p class="dishes-price">$@dishItem.Price</p>
+                    <h2 class="dishes-heading">@dishItem.Ingredient</h2>
+                </div>
+                <img src="img/@dishItem.Image" alt="" class="img-fluid">
+            </a>
+        }
+
+    </div>
+</section> <!-- .section -->
+
+
+
+<section class="section bg-light element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>@Model.MenuTypography.Title</h2>
+                    <span class="back-text-dark">@Model.MenuTypography.SubTitle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row no-gutters">
+
+
+            <div class="col-md-6">
+                <div class="sched d-block d-lg-flex">
+                    <div class="bg-image order-2" style="background-image: url('img/@Model.MenuItems.ElementAt(0).Image');"></div>
+                    <div class="text order-1">
+                        <h3>@Model.MenuItems.ElementAt(0).Ingredient</h3>
+                        <p>@Model.MenuItems.ElementAt(0).Info</p>
+                        <p class="text-primary h3">$@Model.MenuItems.ElementAt(0).Price</p>
+                    </div>
+
+                </div>
+
+                <div class="sched d-block d-lg-flex">
+                    <div class="bg-image" style="background-image: url('img/@Model.MenuItems.ElementAt(1).Image');"></div>
+                    <div class="text">
+                        <h3>@Model.MenuItems.ElementAt(1).Ingredient</h3>
+                        <p>@Model.MenuItems.ElementAt(1).Info</p>
+                        <p class="text-primary h3">$@Model.MenuItems.ElementAt(1).Price</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="sched d-block d-lg-flex">
+                    <div class="bg-image order-2" style="background-image: url('img/@Model.MenuItems.ElementAt(2).Image');"></div>
+                    <div class="text order-1">
+                        <h3>@Model.MenuItems.ElementAt(2).Ingredient</h3>
+                        <p>@Model.MenuItems.ElementAt(2).Info</p>
+                        <p class="text-primary h3">$@Model.MenuItems.ElementAt(2).Price</p>
+                    </div>
+
+                </div>
+
+                <div class="sched d-block d-lg-flex">
+                    <div class="bg-image" style="background-image: url('img/@Model.MenuItems.ElementAt(3).Image');"></div>
+                    <div class="text">
+                        <h3>@Model.MenuItems.ElementAt(3).Ingredient</h3>
+                        <p>@Model.MenuItems.ElementAt(3).Info</p>
+                        <p class="text-primary h3">$@Model.MenuItems.ElementAt(3).Price</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section> <!-- .section -->
+
+
+
+<section class="section element-animate">
+
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>@Model.TestimonialTypography.Title</h2>
+                    <span class="back-text">@Model.TestimonialTypography.SubTitle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @foreach (var testimonialItem in Model.TestimonialItems)
+            {
+                <div class="col-md-4">
+                    <blockquote class="testimonial">
+                        <p>&ldquo; @testimonialItem.Speech &rdquo;</p>
+                        <div class="d-flex author">
+                            <img src="img/@testimonialItem.Image" alt="" class="mr-4">
+                            <div class="author-info">
+                                <h4>@testimonialItem.Author</h4>
+                                <p>@testimonialItem.Profession</p>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            }
+        </div>
+    </div>
+</section> <!-- .section -->
+
+
+<section class="section element-animate">
+    <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center heading-wrap">
+                    <h2>@Model.BlogTypography.Title</h2>
+                    <span class="back-text">@Model.BlogTypography.SubTitle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @foreach (var blogItem in Model.BlogItems)
+            {
+                <div class="col-md-6">
+                    <div class="blog d-block d-lg-flex">
+                        <div class="bg-image" style="background-image: url('img/@blogItem.Image');"></div>
+                        <div class="text">
+                            <h3>@blogItem.Title</h3>
+                            <p class="sched-time">
+                                <span><span class="fa fa-calendar"></span> @blogItem.Date.ToShortDateString()</span> <br>
+                            </p>
+                            <p>@blogItem.Info</p>
+
+                            <p><a href="#" class="btn btn-primary btn-sm">Read More</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</section> <!-- .section -->
+
+<partial name="SubscribePartial" />

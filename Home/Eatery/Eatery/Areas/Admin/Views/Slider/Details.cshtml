@@ -1,0 +1,35 @@
+﻿@model  MainSlider
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Arxa fon şəkli
+                </th>
+                <th>
+                    Başlıq
+                </th>
+                <th>
+                    Mətn
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="~/img/@Model.Background" class="img-thumbnail" style="width:200px;" />
+                </td>
+                <td>
+                    @Model.Title
+                </td>
+                <td>
+                    @Model.Info
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
